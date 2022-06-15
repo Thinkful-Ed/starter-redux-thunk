@@ -3,7 +3,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 export const fetchQuote = createAsyncThunk(
   'quote/fetchQuote',
   async (arg, thunkAPI) => {
-    const response = await fetch('/api/quote');
+    const response = await fetch('http://localhost:3004/api/quote');
     const { data } = await response.json();
     return data;
   }
